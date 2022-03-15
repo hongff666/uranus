@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>Nginx</title>
+    <link href="/2022/03/15/%E5%B7%A5%E5%85%B7/Nginx/"/>
+    <url>/2022/03/15/%E5%B7%A5%E5%85%B7/Nginx/</url>
+    
+    <content type="html"><![CDATA[<h1 id="配置HTTPS"><a href="#配置HTTPS" class="headerlink" title="配置HTTPS"></a>配置HTTPS</h1><ul><li><p>配置参数</p><figure class="highlight nginx"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></div></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-comment">#以下属性中，以ssl开头的属性表示与证书配置有关。</span><br><span class="hljs-section">server</span> &#123;<br>    <span class="hljs-attribute">listen</span> <span class="hljs-number">443</span> ssl;<br>    <br>    <span class="hljs-comment">#配置HTTPS的默认访问端口为443。</span><br>    <span class="hljs-comment">#如果未在此处配置HTTPS的默认访问端口，可能会造成Nginx无法启动。</span><br>    <span class="hljs-comment">#如果您使用Nginx 1.15.0及以上版本，请使用listen 443 ssl代替listen 443和ssl on。</span><br>    <span class="hljs-attribute">server_name</span> uranus.ff666.cn; <span class="hljs-comment">#需要将yourdomain替换成证书绑定的域名。</span><br>    <span class="hljs-attribute">root</span> html;<br>    <span class="hljs-attribute">index</span> index.html index.htm;<br>    <span class="hljs-attribute">ssl_certificate</span> cert/cert-file-name.pem;  <span class="hljs-comment">#需要将cert-file-name.pem替换成已上传的证书文件的名称。</span><br>    <span class="hljs-attribute">ssl_certificate_key</span> cert/cert-file-name.key; <span class="hljs-comment">#需要将cert-file-name.key替换成已上传的证书私钥文件的名称。</span><br>    <span class="hljs-attribute">ssl_session_timeout</span> <span class="hljs-number">5m</span>;<br>    <span class="hljs-attribute">ssl_ciphers</span> ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;<br>    <span class="hljs-comment">#表示使用的加密套件的类型。</span><br>    <span class="hljs-attribute">ssl_protocols</span> TLSv1.<span class="hljs-number">1</span> TLSv1.<span class="hljs-number">2</span> TLSv1.<span class="hljs-number">3</span>; <span class="hljs-comment">#表示使用的TLS协议的类型。</span><br>    <span class="hljs-attribute">ssl_prefer_server_ciphers</span> <span class="hljs-literal">on</span>;<br>    <br>    <span class="hljs-section">location</span> / &#123;<br>        <span class="hljs-attribute">root</span> html;  <span class="hljs-comment">#Web网站程序存放目录。</span><br>        <span class="hljs-attribute">index</span> index.html index.htm;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Nginx</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>管理信息系统[第三次课20220312]</title>
+    <link href="/2022/03/15/%E7%AE%A1%E7%90%86%E5%AD%A6/%E7%AE%A1%E7%90%86%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F/%E7%AC%AC%E4%B8%89%E6%AC%A1%E8%AF%BE202200312/"/>
+    <url>/2022/03/15/%E7%AE%A1%E7%90%86%E5%AD%A6/%E7%AE%A1%E7%90%86%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F/%E7%AC%AC%E4%B8%89%E6%AC%A1%E8%AF%BE202200312/</url>
+    
+    <content type="html"><![CDATA[<h1 id="组织中的信息系统"><a href="#组织中的信息系统" class="headerlink" title="组织中的信息系统"></a>组织中的信息系统</h1><h2 id="企业流程与信息系统"><a href="#企业流程与信息系统" class="headerlink" title="企业流程与信息系统"></a>企业流程与信息系统</h2><img src="https://uranus.ff666.cn/images/image-20220315145913338.png" alt="image-20220315145913338" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315150055802.png" alt="image-20220315150055802" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315150249385.png" alt="image-20220315150249385" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315150413889.png" alt="image-20220315150413889" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315150526238.png" alt="image-20220315150526238" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315150645886.png" alt="image-20220315150645886" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315150755574.png" alt="image-20220315150755574" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315150935001.png" alt="image-20220315150935001" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315151712575.png" alt="image-20220315151712575" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315152141262.png" alt="image-20220315152141262" style="zoom:50%;" /><h2 id="信息系统的类型"><a href="#信息系统的类型" class="headerlink" title="信息系统的类型"></a>信息系统的类型</h2><img src="https://uranus.ff666.cn/images/image-20220315154124943.png" alt="image-20220315154124943" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315154156670.png" alt="image-20220315154156670" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315154620076.png" alt="image-20220315154620076" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315154641865.png" alt="image-20220315154641865" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315154723006.png" alt="image-20220315154723006" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315154807310.png" alt="image-20220315154807310" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315154859723.png" alt="image-20220315154859723" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315154926955.png" alt="image-20220315154926955" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315154955636.png" alt="image-20220315154955636" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315155055565.png" alt="image-20220315155055565" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315160056559.png" alt="image-20220315160056559" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315160235709.png" alt="image-20220315160235709" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315160501899.png" alt="image-20220315160501899" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315160541111.png" alt="image-20220315160541111" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315160630571.png" alt="image-20220315160630571" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315160644686.png" alt="image-20220315160644686" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315160821575.png" alt="image-20220315160821575" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315160952953.png" alt="image-20220315160952953" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315161015333.png" alt="image-20220315161015333" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315161044419.png" alt="image-20220315161044419" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315163924873.png" alt="image-20220315163924873" style="zoom:67%;" /><img src="https://uranus.ff666.cn/images/image-20220315163951747.png" alt="image-20220315163951747" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315164048904.png" alt="image-20220315164048904" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315164418622.png" alt="image-20220315164418622" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315164439616.png" alt="image-20220315164439616" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315164530051.png" alt="image-20220315164530051" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315164706811.png" alt="image-20220315164706811" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315164725664.png" alt="image-20220315164725664" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315164838267.png" alt="image-20220315164838267" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/image-20220315165144892.png" alt="image-20220315165144892" style="zoom:50%;" />]]></content>
+    
+    
+    <categories>
+      
+      <category>管理学</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>管理信息系统</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>劳动法[第一次课20220226]</title>
     <link href="/2022/03/10/%E7%AE%A1%E7%90%86%E5%AD%A6/%E5%8A%B3%E5%8A%A8%E6%B3%95/%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AF%BE20220226/"/>
     <url>/2022/03/10/%E7%AE%A1%E7%90%86%E5%AD%A6/%E5%8A%B3%E5%8A%A8%E6%B3%95/%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AF%BE20220226/</url>
