@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Scrcpy</title>
+    <link href="/2022/03/16/%E5%B7%A5%E5%85%B7/Scrcpy/"/>
+    <url>/2022/03/16/%E5%B7%A5%E5%85%B7/Scrcpy/</url>
+    
+    <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><ul><li><a href="https://github.com/Genymobile/scrcpy">Scrcpy</a> 可以视为开源免费版的 <a href="https://www.iplaysoft.com/vysor.html">Vysor</a> 替代品，可以将安卓手机的画面投屏到电脑桌面显示上并进行操控。简单地说，就是可以<strong>让你在电脑上控制手机</strong>，它支持鼠标控制、键盘输入、电脑剪切板复制粘贴、拖放文件传输到手机、以及拖放APK文件进行安装。</li></ul><h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><h2 id="手机配置"><a href="#手机配置" class="headerlink" title="手机配置"></a>手机配置</h2><ul><li>手机选择文件传输模式，不要选默认的仅充电模式</li></ul><img src="https://uranus.ff666.cn/images/202203161630510.jpg" style="zoom:50%;" /><img src="https://uranus.ff666.cn/images/202203161632951.jpg" alt="1" style="zoom:50%;" /><h2 id="无线连接"><a href="#无线连接" class="headerlink" title="无线连接"></a>无线连接</h2><ul><li>查询设备当前的 IP 地址</li><li>启用 adb TCP&#x2F;IP 连接，执行命令：<code>adb tcpip 5555</code>，其中 5555 为端口号</li><li>拔掉你的数据线</li><li>通过 WiFi 进行连接，执行命令：<code>adb connect 设备IP地址:5555</code></li><li>重新启动 scrcpy 即可</li><li>如果 WiFi 较慢，可以调整码率：<code>scrcpy -b 3M -m 800</code>，意思是限制 3 Mbps，画面分辨率限制 800，数值可以随意调整</li><li>如需切换回 USB 模式，执行：<code>adb usb</code></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Scrcpy</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Nginx</title>
     <link href="/2022/03/15/%E5%B7%A5%E5%85%B7/Nginx/"/>
     <url>/2022/03/15/%E5%B7%A5%E5%85%B7/Nginx/</url>
